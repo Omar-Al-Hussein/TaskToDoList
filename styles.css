@@ -49,3 +49,19 @@ body {
   text-align: center;
   letter-spacing: 0.3px;
 }
+
+/*  Task Controls  */
+.task-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem; /* space between items */
+  margin-top: 1rem;
+}
+
+/* Search Box */
+.search-box {
+  position: relative;
+  flex: 1; /* let it expand to take more space */
+}
+
