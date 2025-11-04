@@ -31,7 +31,7 @@ body {
   gap: 0.5rem; /* space between checkmark and text */
 }
 
-.check-mark {
+.check-mark-icon {
   color: #4A90E2; /* Blue colored check mark */
   font-weight: bold;
   font-size: 1.8rem;
