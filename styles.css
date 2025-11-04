@@ -15,6 +15,7 @@ body {
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   width: 400px;
+  margin-top: 60px;
 }
 
 .app-header {
@@ -25,7 +26,7 @@ body {
 }
 
 .app-header h1 {
-  font-size: 1.8rem;
+  font-size: 2.8rem;
   color: #4A90E2; /* text color */
   display: flex;
   align-items: center;
@@ -35,5 +36,5 @@ body {
 .check-mark-icon {
   color: #4A90E2; /* Blue colored check mark */
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
 }
