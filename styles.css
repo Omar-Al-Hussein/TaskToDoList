@@ -14,7 +14,7 @@ body {
   padding: 0.6rem 1rem 1rem;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  width: 400px;
+  width: 800px;
   margin-top: 60px;
 }
 
@@ -55,14 +55,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.5rem; /* space between items */
+  gap: 0.6rem; /* add a bit more space between items */
   margin-top: 1rem;
+  flex-wrap: wrap; /* lets items wrap if space is too small */
 }
 
 /* Search Box */
 .search-box {
   position: relative;
-  flex: 1; /* let it expand to take more space */
+  flex: 1 1 55%; /* takes up around half of container width */
+  min-width: 180px; /* prevents it from shrinking too much */
 }
 
 .search-box .search-icon {
@@ -76,12 +78,13 @@ body {
 
 .search-box input {
   width: 100%;
-  padding: 0.5rem 0.75rem 0.5rem 2rem; /* extra left padding for icon */
+  padding: 0.5rem 0.75rem 0.5rem 2rem; /* space for 🔍 icon */
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 0.9rem;
   outline: none;
   transition: border-color 0.2s;
+  box-sizing: border-box; /* makes sure padding doesn’t break layout */
 }
 
 .search-box input:focus {
@@ -105,9 +108,9 @@ body {
 }
 
 /* Clear All Button */
-#clearAllBtn {
+#clear-tasks-btn {
   padding: 0.5rem 0.75rem;
-  background-color: #4A90E2;
+  background-color: #357ABD;
   color: white;
   border: none;
   border-radius: 8px;
@@ -116,6 +119,6 @@ body {
   transition: background-color 0.3s;
 }
 
-#clearAllBtn:hover {
-  background-color: #357ABD; /* darker blue on hover */
+#clear-tasks-btn:hover {
+  background-color: #da2626; /* darker blue on hover */
 }
