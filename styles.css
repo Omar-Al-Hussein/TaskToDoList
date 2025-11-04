@@ -11,7 +11,7 @@ body {
 
 .app-container {
   background: white;
-  padding: 1rem;
+  padding: 0.6rem 1rem 1rem;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   width: 400px;
@@ -23,16 +23,17 @@ body {
   flex-direction: column; /* stack elements vertically */
   align-items: center; /* center them horizontally */
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 
 .app-header h1 {
+  margin: 0; /* remove default margins that add vertical gap */
   font-size: 2.8rem;
-  color: #4A90E2; /* text color */
+  color: #4A90E2;
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* space between checkmark and text */
+  gap: 0.5rem;
 }
 
 .check-mark-icon {
@@ -42,7 +43,7 @@ body {
 }
 
 .subtitle {
-  margin-top: 0.1rem; /* small gap under the title */
+  margin-top: 0.2rem; /* smaller gap under the title */
   font-size: 0.9rem;
   color: #888;
   text-align: center;
