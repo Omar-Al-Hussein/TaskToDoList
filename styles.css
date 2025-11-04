@@ -87,3 +87,19 @@ body {
 .search-box input:focus {
   border-color: #4A90E2;
 }
+
+/* Dropdown menu*/
+#taskFilter {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  background-color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#taskFilter:focus {
+  border-color: #4A90E2;
+}
