@@ -7,10 +7,32 @@ body {
     align-items: center;
     background-color: #000;
 }
+
 .app-container {
   background: white;
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   width: 400px;
+}
+
+.app-header {
+  display: flex; /* for flexibility */
+  align-items: center; /* vertical centering */
+  justify-content: center; /* centers title horizontally */
+  margin-bottom: 1.5rem; /* space below header */
+}
+
+.app-header h1 {
+  font-size: 1.8rem;
+  color: #4A90E2; /* text color */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space between checkmark and text */
+}
+
+.check-mark {
+  color: #4A90E2; /* Blue colored check mark */
+  font-weight: bold;
+  font-size: 1.8rem;
 }
