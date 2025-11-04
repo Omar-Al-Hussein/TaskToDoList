@@ -103,3 +103,19 @@ body {
 #taskFilter:focus {
   border-color: #4A90E2;
 }
+
+/* Clear All Button */
+#clearAllBtn {
+  padding: 0.5rem 0.75rem;
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#clearAllBtn:hover {
+  background-color: #357ABD; /* darker blue on hover */
+}
