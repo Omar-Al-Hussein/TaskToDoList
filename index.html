@@ -29,13 +29,32 @@
                 <option value="pending">⏳ Pending Tasks</option>
              </select>
             <!-- clear tasks button -->
+
              <button id="clear-tasks-btn">🗑️ Clear All</button>
         </div>
-        <div class="task-input-field">
-            <input type="text" id="taskinput" placeholder="What needs to be done?">
-            <button id="addtaskbtn">➕ Add Task</button>
-        </div>
-</div>
 
+        <!-- Task Input Field -->
+        <div class="task-input-field">
+            <input type="text" class="taskinput" placeholder="What needs to be done?">
+            <button class="addtaskbtn">Add Task</button>
+        </div>
+
+        <div class="task-list">
+        <!-- Task Lists Holder by JS -->
+        </div>
+
+        <!-- Footer task filtering -->
+        <div class="task-footer">
+            <span class="task-count">0 items left</span>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+            </div>
+        </div>
+
+</div>
+     <script src="script.js"></script>
 </body>
 </html>

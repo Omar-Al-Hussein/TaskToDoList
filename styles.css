@@ -57,6 +57,7 @@ body {
   justify-content: space-between;
   gap: 0.6rem; /* add a bit more space between items */
   margin-top: 1rem;
+  margin-bottom: 1rem;
   flex-wrap: wrap; /* lets items wrap if space is too small */
 }
 
@@ -78,7 +79,7 @@ body {
 
 .search-box input {
   width: 100%;
-  padding: 0.5rem 0.75rem 0.5rem 2rem; /* space for 🔍 icon */
+  padding: 0.9rem 0.75rem 0.5rem 2rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 0.9rem;
@@ -93,7 +94,7 @@ body {
 
 /* Dropdown menu*/
 #taskFilter {
-  padding: 0.5rem 0.75rem;
+  padding: 0.7rem 0.75rem;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 0.9rem;
@@ -109,7 +110,7 @@ body {
 
 /* Clear All Button */
 #clear-tasks-btn {
-  padding: 0.5rem 0.75rem;
+  padding: 0.9rem 0.75rem;
   background-color: #357ABD;
   color: white;
   border: none;
@@ -122,3 +123,106 @@ body {
 #clear-tasks-btn:hover {
   background-color: #da2626; /* darker blue on hover */
 }
+
+.task-input-field {
+  display: flex;            /* put them all on one row */
+  gap: 12px;                /* space between both of them */
+  align-items: center;      /* vertically center them */
+  width: 100%;              /* let it stretch to parent(div) width */
+         /* sensible cap so it doesn't get huge */
+  margin: 0 auto;           /* center horizontally if parent is wider */
+  padding: 8px 0;           /* small vertical breathing room */
+}
+
+.taskinput {
+  flex: 1;                     /* take remaining horizontal space */
+  min-width: 0;                /* prevents overflow in some flex layouts */
+  padding: 12px 14px;          /* inside space for comfortable typing */
+  font-size: 16px;             /* readable text size */
+  border-radius: 8px;          /* rounded corners like the image */
+  border: 1px solid #e6e6e6;   /* subtle grey ish border */
+  background: #ffffff;         /* white field */
+  box-sizing: border-box;      /* include padding/border in width */
+  outline: none;               /* remove default focus outline (bcz of custom focus)*/
+}
+
+.addtaskbtn {
+  padding: 14px 16px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #22f565;       /* pale green — adjust as needed */
+  color: #ffffff;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.05); /* subtle lift */
+  transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms;
+}
+
+.addtaskbtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+}
+
+.addtaskbtn:active {
+  transform: translateY(0);
+  opacity: 0.95;
+}
+
+.taskinput:focus {
+  box-shadow: 0 0 0 4px rgba(158, 231, 182, 0.32); /* soft green glow */
+  border-color: #7bd089;
+}
+
+.addtaskbtn:focus {
+  outline: 3px solid rgba(0,0,0,0.08); /* subtle focus */
+  outline-offset: 2px;
+}
+
+/* Footer container */
+.task-footer {
+  display: flex;                /* Puts count and filters on the same line */
+  align-items: center;          /* Vertically centers content */
+  justify-content: space-between; /* Pushes count to left, filters to right */
+  background-color: #ffffff;    /* White background to match task cards */
+  padding: 0.75rem 1rem;        /* Space inside the box */
+  border-radius: 8px;           /* Rounded corners for a soft look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  margin-top: 1rem;             /* Space above footer */
+  font-size: 0.95rem;           /* Slightly smaller text than main titles */
+  color: #333;                  /* Dark grey text for readability */
+}
+
+/* "0 items left" text */
+.task-count {
+  font-weight: 500;
+}
+
+/* Filters container (All / Active / Completed) */
+.filters {
+  display: flex;                /* Line up the buttons horizontally */
+  gap: 0.5rem;                  /* Space between buttons */
+}
+
+/* Individual filter buttons */
+.filter-btn {
+  background: none;             /* Transparent background by default */
+  border: 1px solid #ddd;       /* Light border for shape */
+  border-radius: 5px;
+  padding: 0.4rem 0.75rem;      /* Comfortable click area */
+  cursor: pointer;
+  font-family: inherit;         /* Match app’s font */
+  transition: all 0.2s ease;    /* Smooth hover/active transitions */
+}
+
+/* Hover effect for all buttons */
+.filter-btn:hover {
+  background-color: #f0f0f0;    /* Subtle hover color */
+}
+
+/* Active filter (currently selected) */
+.filter-btn.active {
+  background-color: #007bff;    /* Bright blue for active state */
+  color: white;
+  border-color: #007bff;
+}
+
