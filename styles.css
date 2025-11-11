@@ -235,3 +235,88 @@ body {
   border-color: #007bff;
 }
 
+.task-item {
+  display: flex;               /* Text + delete button in one row */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;   /* subtle card background */
+  padding: 0.75rem 1rem;       /* comfortable spacing */
+  border-radius: 8px;           /* rounded corners */
+  margin-bottom: 0.5rem;       /* space between tasks */
+  font-size: 1rem;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.task-item:hover {
+  background-color: #f0f0f0;  /* slight hover effect */
+}
+.task-item.completed .task-text {
+  text-decoration: line-through; /* strike-through */
+  color: #888;                    /* lighter color for completed */
+  opacity: 0.7;                   /* subtle fade */
+}
+.task-text {
+  flex: 1;                 /* takes all remaining space */
+  user-select: none;       /* prevent accidental text selection */
+}
+.delete-task {
+  background: none;          /* transparent button */
+  border: none;              /* no border */
+  color: #da2626;            /* red color */
+  font-size: 1.2rem;         /* slightly bigger icon */
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.delete-task:hover {
+  transform: scale(1.2);     /* subtle grow on hover */
+}
+.edit-task {
+  background: none;          /* transparent background */
+  border: none;              /* no border */
+  color: #4A90E2;            /* blue color */
+  font-size: 1rem;           /* similar size to delete */
+  cursor: pointer;           /* pointer on hover */
+  transition: transform 0.1s, color 0.2s;
+}
+
+.edit-task:hover {
+  transform: scale(1.2);     /* subtle grow effect */
+  color: #007bff;            /* darker blue on hover */
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fefefe;
+  padding: 0.7rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  gap: 0.75rem; /* space between checkbox, text, and buttons */
+}
+
+/* Checkbox */
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #22f565; /* green check */
+}
+
+/* Task text */
+.task-text {
+  flex: 1; /* take remaining space */
+  font-size: 1rem;
+  color: #333;
+  word-break: break-word; /* prevent overflow */
+}
+
+/* Completed task text */
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #888;
+}
+
